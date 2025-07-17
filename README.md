@@ -14,15 +14,208 @@ while True:
 	except:
 		print("")		
 #— — — — — — — — — — — — —
-import os,sys;import requests,time,secrets,threading,string,uuid;from random import choice,randrange,randint;from uuid import uuid4;from MedoSigner import Argus,Gorgon, md5,Ladon;from urllib.parse import urlencode;import random,re,json,SignerPy,binascii
+import sys, importlib, subprocess
+
+def need(mod, pkg):
+    try:
+        importlib.import_module(mod)
+    except ImportError:
+        subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade", pkg])
+
+need("requests", "requests")
+need("telebot", "pyTelegramBotAPI==3.7.7")
+need("MedoSigner", "MedoSigner")
+need("SignerPy", "SignerPy")
+
+# بعد التأكد:
+import os, sys, time, secrets, threading, string, uuid, random, re, json, binascii
+from random import choice, randrange, randint
+from uuid import uuid4
+from urllib.parse import urlencode
+import requests
+import telebot
 try:
-	import telebot 
-except:
-	os.system('pip install telebot');os.system('pip install Pytelegrambotapi==3.7.7');os.system('clear');import telebot
+    from MedoSigner import Argus, Gorgon, md5, Ladon
+except ImportError:
+    pass
+try:
+    import SignerPy
+except ImportError:
+    pass
+	
+os.system('clear');import telebot
 Z = '\033[1;31m';X = '\033[1;33m';F = '\033[2;32m' ;C = "\033[1;97m";B = '\033[2;36m';Y = '\033[1;34m';C = "\033[1;97m";E = '\033[1;31m';B = '\033[2;36m';G = '\033[1;32m';S = '\033[1;33m'
 idd=input(B+"Enter ID : ")
 tok= input(B+"Enter Token : ")
-nameee=input(f'{S}Write Name File Session :')
+
+
+
+nameee=['5ee5d7b8db9ea6adc488a6d8922f41db',
+'5a7e7c83f61e6e0e1c3ca128cd3ee79a',
+'401c36fc2d0abbdda740a52838cd31c2',
+'a3b91f7d92a916ce843690a99f0c43ee',
+'c46f26a1aa31f443e6b73a2baab4fcb4',
+'a2e045e87922de8c8c5339b04cc23adb',
+'987b534331cb8fe0426158e4f8f39124',
+'9689fb7803f6b4b105e01eda4ab43667',
+'e29d771a2cf7e0185e47a234d57c1808',
+'40210b4815aa47f3d2cfeb45cf713bea',
+'129eef9249b541845eba16fc14781582',
+'6324058bdfe884515217ff4acb90073d',
+'ff3c13526e2a360a1fefaca8c41e9ce3',
+'220a3c08704e2d0a46c9d9b43854e682',
+'1b1d59bf2bbe2458f5b9287c3b41af22',
+'70b4866e3573692bdda7679e8e5d3939',
+'a2e045e87922de8c8c5339b04cc23adb',
+'508ac0dd034d89232616a44f62077380',
+'2aa562d2463d90d723fac8d46b58246c',
+'1b1d59bf2bbe2458f5b9287c3b41af22',
+'90ba1ff26cf1fbca017d44a8be05f41d',
+'e30441f84bebed5ab7fe0c81345b40cc',
+'1c21012aa111369c85ff963c4bc30e29',
+'e9191cf652801115dfd7cc9ce0754492',
+'8b083ff40730e0cd42eb639598906af5',
+'129eef9249b541845eba16fc14781582',
+'f0aa37632755d7e04da7a77f54ea1519',
+'c517f560947625ed86f27435282dd234',
+'61705fae4cd68501d35123df3948656d',
+'98106f1cebb49c19e8e0fa465ea2e979',
+'536ae2abec9ed18942939af83296b8ef',
+'9f0c1ac60c09af5a942bd5df9ae05cdf',
+'a7739802b84434c4175225a907bc4df7',
+'971d7038eb4ee04c7e52209ef7ee5755',
+'2aa562d2463d90d723fac8d46b58246c',
+'48399b568941080f90b6da6cc0f40b63',
+'08af99cac4c0a488bf5500351ad31a50',
+'e29d771a2cf7e0185e47a234d57c1808',
+'48399b568941080f90b6da6cc0f40b63',
+'e365a3aa9f85099e53c0ea46f946a567',
+'508ac0dd034d89232616a44f62077380',
+'14f1735a3ac77dc63e18a59bda77edee',
+'e365a3aa9f85099e53c0ea46f946a567',
+'07535b9405b8573072acc54136195a26',
+'f0aa37632755d7e04da7a77f54ea1519',
+'fcadc9245d341fc099ba5924100019ed',
+'b6d6d6c88a2405fd025cf56ff7124473',
+'6ac7cb6a6cd03bf5e8e9c5dbe2fa7b71',
+'e64ed96b8c3ea51c4524b7dd25bf0abd',
+'9f0c1ac60c09af5a942bd5df9ae05cdf',
+'0f92ff1418ccd9d3d9bfdf27d3a2a3b6',
+'0f92ff1418ccd9d3d9bfdf27d3a2a3b6',
+'31fffc2561f90d7780c034db4f458dad',
+'e64ed96b8c3ea51c4524b7dd25bf0abd',
+'f2a3ec8f71217f2fa2ed8507a8641920',
+'6fa98a5d216b91fb49e8bd0f50b6dc29',
+'3a19ad6aec83c77bf58ad20a95d87b02',
+'ffea1b72a3de8ebb5c1e48c91d3886cc',
+'c0ed975d7fab0b17ea77c9aac4772eda',
+'62f665d8fef41027c569a264e39d1884',
+'8799b7c86a83c99eb082e963e930b426',
+'30ad5eb572241440c7f642ad07c3972e',
+'3e815d7ed8d5ee5ed26394221cb94814',
+'b521fc106d86884df7392b0d47094b42',
+'70e134536c70bbd31b540bfb9abd9f16',
+'a79666d0aedf81af7dec5e7302ce1a6a',
+'59be59febf4f4e5ad3f01cd51b73c678',
+'b18a44f1169bfdcd307474ceada8090c',
+'46b49a9a910464297d4a2d703cfffb60',
+'9b465c4456506e57cbe2f673fe3d748f',
+'ecb67a58cf2f6a6b7e8341a8f4ec24f8',
+'333c2f1fa9ccc31d05e3433f33379f23',
+'1e5aa603077be314c594aa05c85a29c7',
+'52a1a1b3ad87c9c4b13ee3522aa647f6',
+'226d6f0f02dd07ea3e0e3c7e1a54ee98',
+'f60c544b5014358574cd7df1c1751f42',
+'b054149c7a2fa4681298030e91d0c033',
+'fb32c6bfd5bdef0cd0b9e5c999cf9e46',
+'11fbbcffb0525d52bc394389f24a936b',
+'30514372833cc1b571f8dc8a0f55db94',
+'88c024610ed4bf8ceb37cc92e78b4438',
+'fc1f9672a6d4177993114198414be131',
+'d8f6f9558e1807a1cd083f13de997693',
+'fef15837eef02f1ebd56523240dd5be0',
+'5e4e1267e08331d25ed7012d84f78243',
+'32df03aa0a45104c29c0eb241bfaf052',
+'277641c2bd68423af3c97ee64116c9ea',
+'608e50f670227682805b6c4db9008025',
+'f6c32b0881229967ea0e5c90635fa19e',
+'8f68c10b8a60b64e8d2dd3fcb1cdc6be',
+'497a97f73536f4f24831bebfed672258',
+'6f7a25ed7db6c0620d7d4b1a1779813d',
+'df9f5cef1f2d05757af659235150e5a6',
+'f7e3313f4225c0bdf1ce635e80938a44',
+'ab47913dc08abeb336556e9418449995',
+'c3b41475865dd21e2a42be682cbbeec7',
+'be5d43022279aae0fbb2810645e3a655',
+'e1f1b7e764da963f9d0dfbc2f8c811fb',
+'d0900ba89c1a62c7334db51b90d08046',
+'5eccb0f11bda1f3744d306f7a1c2e4ee',
+'871319a3e34f2034d5204f3e9d3fc9bc',
+'b2874922a4fbc3bcc4863724e612a013',
+'800266a1b9550a662a533bbe0a51edff',
+'ac8cdd63d992feda7eb1be63cd5d3cbe',
+'fe087743cb83b87fe511c4dcc2b54b9e',
+'78cd438e41a1be9f27434a7ecb45d1f6',
+'28797e6bb6e3b4a2924bdd17d5ac2c9d',
+'ecbce30174a3109533e8c9db2b400e9f',
+'de296140fdf052974d313dffaeac39a8',
+'def6f7881ea24c7c6e2f2faafd749e33',
+'5cd2eb39aadf7c11bc741131fefe8352',
+'e2b90094da6ff546902b52c7cbcea7bb',
+'b9d8b79367847fd9dfb8647bb96edd41',
+'38df69157cd19f89825ad86e40533b3e',
+'eb3fa50f60dd60f3a415f4d57d5c368d',
+'8a9e4778c7074dc6497bce8fbc3e7be6',
+'78f01b752b0e291c4177e2319871e5cd',
+'f99638331ea251eba1dfae6ad3e331cd',
+'1d5a8ad70fe1273483834fd99ba1cdee',
+'531e7ed1aa699a929b313b8960677c07',
+'36726a0145f85571c4d7919a564a330d',
+'3e99fe2e40577af27dc4fb15f9b438f7',
+'80b98f6c3b0e9eb1737f0fb96cb73e1d',
+'99b2c615978200c679b321f04d314d49',
+'6452b4925edad1b34284d9cf4887d281',
+'475880946e2be5c2539a6c51746d2a27',
+'12700e53ced122977a6705435f8dc433',
+'99199284fc83817a51844b35e12b9a18',
+'41dede88fec05de213462698b04ce27f',
+'2c973cfb6559bc0369cefdbb75d5cbb7',
+'98b6f608bcb1a1714f7d14ec97397dad',
+'c33e3da3ec3b8e611625db85fb8ea360',
+'dc7d2164919b5432676b4a8315d8f8b3',
+'1edfd0dbb4f14549ead50fb19dc0dae3',
+'771fc5bce51efef06174c5aa78fa896c',
+'f2da58a0f3b534620e8ca7d070be1457',
+'e0a008174fbb2f2c1923e7ca2d7ae0ba',
+'160ca3c436693fcdc1165149c04d26c6',
+'6b73e7069c58abfa77d72af913c75601',
+'fb3ecd7a225441bcdf0f82a153976c51',
+'959c67bd75dce25e3913ddbe7831013c',
+'01d9a4ee761a44ab1f80d4554cc10301',
+'98ac6a1ed1cea0cd7dd86da4ad548983',
+'9e42fb4166611ce207b8bfcf8e76193d',
+'f8448f180e37a6157b2fa6728929c858',
+'300d027cc70fd71efa2dc4e1661bd053',
+'28e5067ca59aefefe8a5716a4c257019',
+'3c639274b33f920b4e2509382a26e737',
+'114f488327fe3f9e0cb7e5d0c93e18da',
+'d176247e0d0e5991755527960c9bac6e',
+'f1b2fee1dd90c445fd9c91de64b3bdbb',
+'d7f340e143dbb4eab73dd8f675d20b97',
+'7013e9767ad43770d1a86cdd45b880e5',
+'e370e7e1b0a0010360282d131c2d0613',
+'63ab5a670d8d6a9fbd14f7d3fd0b30da',
+'bc4d7382e95f3b9fa79d9164dac426e6',
+'9b19bb4e743f4220cc05770ab88164af',
+'f7a3b3d4b075b192cffd1beb30b813c7']
+
+
+
+
+#input(f'{S}Write Name File Session :')
+
+
+
 os.system('clear')
 ya=0
 no=0
@@ -430,13 +623,13 @@ def chzm(email,cookies):
 \033[1;35m - — — — — — — — — — — — — —\033[0m
 ''');sys.stdout.flush()
 def rrandom():
-        try:
-        	e=open(nameee, 'r').read().splitlines()
-        except:
-        	print(f'{Z}The file does not exist ! ')
-        	exit()
+#        try:
+#        	e=open(nameee, 'r').read().splitlines()
+#        except:
+#        	print(f'{Z}The file does not exist ! ')
+#        	exit()
         while True: 
-                cookies={"sessionid": random.choice(e)}
+                cookies={"sessionid": random.choice(nameee)}
                 #print(cookies) 
             #try:
                 g=choice(
