@@ -31,6 +31,7 @@ need("SignerPy", "SignerPy")
 import os, sys, time, secrets, threading, string, uuid, random, re, json, binascii
 from random import choice, randrange, randint
 from uuid import uuid4
+from telebot import types
 from urllib.parse import urlencode
 import requests
 import telebot
@@ -47,7 +48,6 @@ os.system('clear');import telebot
 Z = '\033[1;31m';X = '\033[1;33m';F = '\033[2;32m' ;C = "\033[1;97m";B = '\033[2;36m';Y = '\033[1;34m';C = "\033[1;97m";E = '\033[1;31m';B = '\033[2;36m';G = '\033[1;32m';S = '\033[1;33m'
 idd=input(B+"Enter ID : ")
 tok= input(B+"Enter Token : ")
-
 
 
 nameee=['5ee5d7b8db9ea6adc488a6d8922f41db',
@@ -340,14 +340,13 @@ def info(email):
         if not match:
             ff=f'''
 — — — — — — — — — — — — —
-< Username - {user} >
-< Email - {email} >
-< Def - @Q_e_9 >
+• Username - {user} 
+• Email - {email} 
+• Def - @Q_e_9 
 — — — — — — — — — — — — —
     '''
             requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")  
-            return
-            
+            return     
         data = json.loads(match.group(1))
         
         iinfo = data['__DEFAULT_SCOPE__']['webapp.user-detail']['userInfo']
@@ -367,31 +366,31 @@ def info(email):
         }        
         ff = f"""
 — — — — — — — — — — — — —
-< Name - {account_data['name']} >
-< Username - @{account_data['user']} >
-< Email - {email} >
-< Reset - {rest(username)} >
+• Name - {account_data['name']} 
+• Username - @{account_data['user']}
+• Email - {email} 
+• Reset - {rest(username)} 
 — — — — — — — — — — — — —
-< Followers - {account_data['folos']} >
-< Following - {account_data['folon']} >
-< Likes - {account_data['lik']} >
-< Id - {account_data['id']} >
-< Private - {account_data['priv']} >
-< Videos - {account_data['vid']} >
-< Verified - {account_data['verified']} >
-< Def - @Q_e_9 >
+• Followers - {account_data['folos']} 
+• Following - {account_data['folon']} 
+• Likes - {account_data['lik']} 
+• Id - {account_data['id']} 
+• Private - {account_data['priv']} 
+• Videos - {account_data['vid']} 
+• Verified - {account_data['verified']} 
+• Def - @Q_e_9 
 — — — — — — — — — — — — —
         """
-        print(ff)
-        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")
+        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")  
+    except requests.exceptions.RequestException as e:
         with open('working_sessions.txt', 'a') as f:
         	f.write("\n" + ff)
     except requests.exceptions.RequestException as e:
         ff=f'''
 — — — — — — — — — — — — —
-< Username - {user} >
-< Email - {email} >
-< Def - @Q_e_9 >
+• Username - {user} 
+• Email - {email} 
+• Def - @Q_e_9 
 — — — — — — — — — — — — —
     '''
         requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")  
@@ -399,20 +398,19 @@ def info(email):
     except json.JSONDecodeError:
        ff=f'''
 — — — — — — — — — — — — —
-< Username - {user} >
-< Email - {email} >
-< Def - @Q_e_9 >
+• Username - {user} 
+• Email - {email} 
+• Def - @Q_e_9 
 — — — — — — — — — — — — —
     '''
-    
        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")   
        print(f" خطأ: {str(e)}")
     except Exception as e:
         ff=f'''
 — — — — — — — — — — — — —
-< Username - {user} >
-< Email - {email} >
-< Def - @Q_e_9 >
+• Username - {user} 
+• Email - {email} 
+• Def - @Q_e_9 
 — — — — — — — — — — — — —
     '''
         requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")   
@@ -701,7 +699,7 @@ def rrandom():
                     	#except:
                     	print(".", end="",flush=True)
 threads = []
-for i in range(15):
+for i in range(30):
 	t = threading.Thread(target=rrandom)
 	threads.append(t)
 	t.start()    
